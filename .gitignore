@@ -1,0 +1,4 @@
+server/log/*.log
+server/tmp/**/*
+server/.DS_Store
+.DS_Store
