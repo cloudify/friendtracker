@@ -24,7 +24,7 @@ Rails::Initializer.run do |config|
   # They can then be installed with "rake gems:install" on new installations.
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "aws-s3", :lib => "aws/s3"
-config.gem "capistrano-ext", :lib => "capistrano"
+  config.gem "capistrano-ext", :lib => "capistrano"
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
@@ -48,8 +48,8 @@ config.gem "capistrano-ext", :lib => "capistrano"
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
-    :session_key => '_bort_session',
-    :secret      => 'c9ba017060e99fd4e23621a963dfe5d05e7975c732e622924b4a9b86a6b6d60ca6c067429f937c06675480f3181fc39f0d5328a73b559c3879cc2d9bee662c9d'
+    :session_key => '_friendtracker_session',
+    :secret      => '218812dd8a40cfcd130497f33ce76979c10560942c25aeffc154f19ef8fa7f833f5c1b5e52d1aab7b4a322c8df92ee8010e3cd5d98f22b98baf10cbe0377018f'
   }
 
   # Use the database for sessions instead of the cookie-based default,
