@@ -1,4 +1,4 @@
-class AddUserLocation < ActiveRecord::Migration
+class AddUsersLocation < ActiveRecord::Migration
   def self.up
     add_column :users, :location_lt, :float, :default => 0
     add_column :users, :location_ln, :float, :default => 0
