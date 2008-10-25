@@ -3,7 +3,20 @@ class UsersController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :create
   before_filter :login_required, :only => [:index]
   
-  def index  
+  def index
+    @useMaps = true
+    
+    @map = GMap.new("map_div")
+    @map.control_init(:large_map => true,:map_type => true)
+    @map.center_zoom_init([current_user.lat,current_user.lng],4)
+    
+    current_user.friends.each do |friend|
+      marker = GMarker.new([friend.lat,friend.lng], :title => "Amico", :info_window => "Bho")
+      @map.add_overlay(marker)
+    end
+    
+    marker = GMarker.new([current_user.lat,current_user.lng], :title => "Io", :info_window => "Bho")
+    @map.add_overlay(marker)
   end
   
   def new
