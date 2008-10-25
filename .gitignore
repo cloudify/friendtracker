@@ -4,4 +4,5 @@ server/.DS_Store
 .DS_Store
 .project
 .loadpath
-
+client/build
+client/dist
