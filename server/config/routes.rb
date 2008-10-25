@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :passwords
   map.resource :session
   
+  map.user_dashboad '/dashboard', :controller => "users", :action => "index"
   # Home Page
   map.root :controller => 'sessions', :action => 'new'
 

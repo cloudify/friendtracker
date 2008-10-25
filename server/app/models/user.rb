@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   include Authentication::ByCookieToken
   include Authorization::AasmRoles
 
+  acts_as_mappable
+  
   # Validations
   validates_presence_of :login, :if => :not_using_openid?
   validates_length_of :login, :within => 3..40, :if => :not_using_openid?
@@ -51,6 +53,14 @@ class User < ActiveRecord::Base
   # Overwrite password_required for open id
   def password_required?
     new_record? ? not_using_openid? && (crypted_password.blank? || !password.blank?) : !password.blank?
+  end
+  
+  def lat
+    location_lt
+  end
+  
+  def lng
+    location_ln
   end
 
   protected
