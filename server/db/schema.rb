@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20081025133157) do
+ActiveRecord::Schema.define(:version => 20081025133542) do
 
   create_table "friends", :id => false, :force => true do |t|
     t.integer "user_id",        :null => false
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(:version => 20081025133157) do
     t.datetime "deleted_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "location_lt",                              :default => 0.0
+    t.float    "location_ln",                              :default => 0.0
   end
 
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
