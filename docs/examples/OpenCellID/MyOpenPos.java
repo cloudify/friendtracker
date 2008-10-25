@@ -6,7 +6,6 @@
 
 import com.eightmotions.map.BufferImage;
 import com.eightmotions.map.GenericOverlay;
-import com.eightmotions.map.MapDefaultCanvas;
 import com.eightmotions.map.MapDisplay;
 import com.eightmotions.map.MapDisplayListener;
 import com.eightmotions.map.Marker;
