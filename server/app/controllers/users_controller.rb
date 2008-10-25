@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
-  skip_before_filter :verify_authenticity_token, :only => :create
   
-  def index
-    
+  skip_before_filter :verify_authenticity_token, :only => :create
+  before_filter :login_required, :only => [:index]
+  
+  def index  
   end
   
   def new
