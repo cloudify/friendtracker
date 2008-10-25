@@ -9,7 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080929171348) do
+ActiveRecord::Schema.define(:version => 20081025133157) do
+
+  create_table "friends", :id => false, :force => true do |t|
+    t.integer "user_id",        :null => false
+    t.integer "user_id_target", :null => false
+  end
+
+  create_table "invites", :force => true do |t|
+    t.integer  "user_id",        :null => false
+    t.integer  "user_id_target", :null => false
+    t.string   "code"
+    t.text     "message"
+    t.boolean  "is_accepted"
+    t.datetime "accepted_at"
+  end
 
   create_table "open_id_authentication_associations", :force => true do |t|
     t.integer "issued"
