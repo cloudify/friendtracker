@@ -7,11 +7,11 @@ class ApiController < ApplicationController
     u.save
     
     @users = User.find(:all)
-    # respond_to do |format|
-      #format.txt { 
-      render :text => (@users.collect {|u| [u.id, u.login, u.location_lt, u.location_ln].join(" ") }.join("\n")), :layout => false 
-      #}
-    # end
+    respond_to do |format|
+      format.csv { 
+        render :text => (@users.collect {|u| [u.id, u.login, u.location_lt, u.location_ln].join(",") }.join("\n")), :layout => false 
+      }
+    end
   end
   
 end
