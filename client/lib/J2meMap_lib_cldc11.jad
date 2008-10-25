@@ -1,0 +1,8 @@
+MIDlet-1: HelloMap,,com.eightmotions.test.HelloMap
+MIDlet-Jar-Size: 168878
+MIDlet-Jar-URL: J2meMap_lib_cldc11.jar
+MIDlet-Name: libraryCLDC11
+MIDlet-Vendor: Vendor
+MIDlet-Version: 9.60
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
