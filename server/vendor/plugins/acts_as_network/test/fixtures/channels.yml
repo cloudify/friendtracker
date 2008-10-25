@@ -1,0 +1,15 @@
+discovery:
+  id: 0
+  name: Discovery
+  
+usa:
+  id: 1
+  name: USA
+
+amc:
+  id: 2
+  name: AMC
+  
+abc:
+  id: 3
+  name: ABC

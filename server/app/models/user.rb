@@ -22,7 +22,10 @@ class User < ActiveRecord::Base
   
   # Relationships
   has_and_belongs_to_many :roles
-
+  
+  # http://github.com/sjlombardo/acts_as_network/tree/master
+  acts_as_network :friends, :through => :invites, :conditions => "is_accepted = 't'"
+  
   # HACK HACK HACK -- how to do attr_accessible from here?
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
